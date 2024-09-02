@@ -2,4 +2,18 @@ spring:
   application:
     name: spring-cloud-github-demo
   config:
-    import: github-cloud
+    import: github-cloud/boboc-app/spring-cloud-github-demo-property:property1.json
+###
+#   https://github.com/boboc-app/spring-cloud-github-demo-property/blob/main/property1.json
+#  {
+#    "message" : "Hello World",
+#    "second" : 2
+#  }
+###
+
+github:
+  cloud:
+    token: {{Your Github Token}}
+
+props:
+  my-message: ${message}
